@@ -1,23 +1,19 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { ExampleContainer } from '@/Containers'
+import React from 'react';
+import Login from "@/Containers/Login/Login";
+import {createStackNavigator} from "@react-navigation/stack";
 
-const Tab = createBottomTabNavigator()
-
+const Stack = createStackNavigator();
 // @refresh reset
 const MainNavigator = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Home"
-        component={ExampleContainer}
-        options={{
-          tabBarIconStyle: { display: 'none' },
-          tabBarLabelPosition: 'beside-icon',
-        }}
-      />
-    </Tab.Navigator>
+    <Stack.Navigator>
+        <Stack.Screen name={'Login'} component={Login} />
+    </Stack.Navigator>
+
+
   )
 }
+
+
 
 export default MainNavigator
